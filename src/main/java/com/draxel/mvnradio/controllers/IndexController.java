@@ -21,8 +21,9 @@ public class IndexController {
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String Hola(Model model){
         model.addAttribute("message", "Hello from spring");
-        return "hello";
+        return "index";
     }
+    
     
     @RequestMapping(value = "/login", method = RequestMethod.GET)
     public String login(){
