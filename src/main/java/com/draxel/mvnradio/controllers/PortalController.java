@@ -16,13 +16,20 @@ import org.springframework.web.servlet.ModelAndView;
  * @author Draxl
  */
 @Controller
-@RequestMapping(value = "portal")
+@RequestMapping(value = "/portal")
 public class PortalController {
     
     @RequestMapping(value = "/inicio", produces = "text/html; charset=utf-8")
     public ModelAndView inicio(HttpServletRequest request){
         ModelAndView vista = new ModelAndView();
         vista.setViewName("/portal/inicio");
+        return vista;
+    }
+    
+    @RequestMapping(value = "/solicitaCancion", produces = "text/html; charset=utf-8")
+    public ModelAndView solicitarCancion(HttpServletRequest request){
+        ModelAndView vista = new ModelAndView();
+        vista.setViewName("/portal/solicitarCancion");
         return vista;
     }
     
